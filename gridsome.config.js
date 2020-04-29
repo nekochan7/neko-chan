@@ -5,8 +5,8 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Until The End Of The World',
-  siteUrl: 'https://neko-chan.netlify.com/',
+  siteName: 'Una última vez',
+  siteUrl: 'https://neko-chan.netlify.app/',
   siteDescription: 'My personal blog',
   plugins: [
     {
@@ -14,7 +14,6 @@ module.exports = {
       options: {
         path: 'content/posts/**/*.md',
         typeName: 'Post',
-        // route: '/:title',
         remark: {
           plugins: [
             ['@gridsome/remark-prismjs', { transformInlineCode: true }]
@@ -55,7 +54,8 @@ module.exports = {
         nodeToFeedItem: (node) => ({
           title: node.title,
           date: node.date || node.fields.date,
-          content: node.content
+          content: node.content,
+          author: node.author
         })
       }
     }

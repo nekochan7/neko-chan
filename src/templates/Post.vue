@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div class="article">
-      <h1 class="article-title">{{ $page.post.title }}</h1>
+      <h2 class="article-title">{{ $page.post.title }}</h2>
       <p class="article-date"> {{ $page.post.date}} · <i>{{ $page.post.timeToRead }} min read</i></p>
       <article v-html="$page.post.content" />
     </div>
@@ -28,17 +28,20 @@ query Post ($path: String!) {
     title
     content
     date (format: "D MMMM YYYY")
-    timeToRead
+    timeToRead,
+    author
   }
 }
 </page-query>
 
 <style>
   .article {
-    margin-top: 15px;
+    margin-top: 40px;
   }
   .article-title {
-    margin-bottom:0;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* font-size: 2em; */
   }
   .article-date {
     color: var(--app-font-color);

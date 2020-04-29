@@ -1,6 +1,6 @@
 <template>
   <div class="post-list">
-    <h1>{{year}}</h1>
+    <h2>{{ year }}</h2>
     <PostItem :key="post.node.id" v-for="post in this.postsByYear" :post="post.node" />
   </div>
 </template>
@@ -25,9 +25,8 @@ export default {
 </script>
 
 <style scoped="true">
-h1 {
-  font-size:2em;
-  margin:0;
+h2 {
+  margin: 0;
 }
 .post-list {
   margin-top:20px;
