@@ -104,7 +104,7 @@ export default {
     padding: 5px;
   }
   .theme-toggle {
-    margin-top: 35px;
+    margin-top: 10px;
     a {
       &:hover {
         color: rgb(32, 201, 151);

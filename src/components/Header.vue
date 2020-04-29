@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <g-link to="/"><h1 style="margin-bottom: 10px">😼 {{ siteName }} 🇨🇮</h1></g-link>
+    <g-link to="/"><h1 style="margin-top: 10px; margin-bottom: 10px;">😼 {{ siteName }} 🇨🇮</h1></g-link>
     <ClientOnly>
       <ThemeToggle />
     </ClientOnly>
