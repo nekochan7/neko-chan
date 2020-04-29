@@ -47,9 +47,16 @@ query {
         timeToRead
         description
         date (format: "MMM D YYYY")
-        path
+        path,
+        author
       }
     }
   }
 }
 </page-query>
+
+<style>
+  .posts {
+    margin-top: 40px;
+  }
+</style>

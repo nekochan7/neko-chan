@@ -1,25 +1,21 @@
 <template>
   <main class="layout" role="main">
     <Header :siteName="$page.metadata.siteName" />
-    <slot/>
+    <slot />
     <div class="footer">
-      <div>
-        <p>
-          Built with
-          <a target="_blank" class="link" href="//gridsome.org">Gridsome</a>
-          & Made with ❤️
-        </p>
-      </div>
-      <div class="footer-links">
-        <a target="_blank" href="/sitemap.xml">Sitemap</a>
-        <a target="_blank" href="/feed.xml">RSS Feed</a>
+      <div class="footer-content">
+        <p>❤️ <g-link to="/">Neko Chan</g-link></p>
+        <div class="footer-links">
+          <a target="_blank" href="/sitemap.xml">Sitemap</a>
+          <a target="_blank" href="/feed.xml">RSS Feed</a>
+        </div>
       </div>
     </div>
   </main>
 </template>
 
 <script>
-import Header from "@/components/Header";
+import Header from '@/components/Header'
 
 export default {
   components: {
@@ -37,7 +33,7 @@ export default {
   --app-background-color: #091A28;
   --app-font-color: white;
 }
-[theme="sepia"] {
+[theme="coffee"] {
   --app-background-color: #F1E7D0;
   --app-font-color:#433422;
 }
@@ -45,10 +41,10 @@ body {
   background-color: var(--app-background-color);
   color: var(--app-font-color);
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
-  font-size:1.1em;
+  font-size: 1.1em;
 }
 .layout {
   max-width: 760px;
@@ -57,14 +53,19 @@ body {
   padding-right: 20px;
 }
 .footer {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-top:60px;
-  font-size:.8em;
+  margin-top: 60px;
+  font-size: .8em;
 }
 .footer a {
-  color:gray;
+  color:grey;
+  // color: orange;
+  text-decoration: none;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dotted #9a9a9a;
 }
 .footer-links a {
   margin:0 4px;

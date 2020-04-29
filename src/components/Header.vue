@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <g-link to="/"><h1>👨‍💻 {{ siteName }}</h1></g-link>
+    <g-link to="/"><h1 style="margin-bottom: 10px">😼 {{ siteName }} 🇨🇮</h1></g-link>
     <ClientOnly>
       <ThemeToggle />
     </ClientOnly>
@@ -20,6 +20,7 @@ export default {
     display:flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px dotted #9a9a9a;
     a {
       color:inherit;
       border-bottom: none;
